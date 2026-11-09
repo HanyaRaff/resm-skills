@@ -353,12 +353,3 @@ draw, any logic assumptions, and any design-vs-backend gaps (L7).
 Tell the user: what was built, which screenshots/measurements you compared, and every remaining
 difference with its reason. If you could not render or measure (server down, auth, missing data),
 say so plainly. Never claim "matches the design" without B1–B3.
-
-## Project notes (this repo)
-
-- Type/colour tokens: `src/styles/app.css` (`--text-*` per breakpoint), exposed via `tailwind.config.js`.
-- PrimeVue: `:pt` must be an object of sections, never a function; `mergeProps` concatenates
-  classes, so use `!` on conflicts; tabs get a default 2px bottom border (`!border-0` for pills);
-  body-appended overlay menus can look offset in headless captures, verify via the DOM dump.
-- Confirm/delete prompts use `src/Components/Modals/PromptModal.vue`.
-- No Figma node ids in code comments.
